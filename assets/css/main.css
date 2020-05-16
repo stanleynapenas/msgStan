@@ -5,6 +5,11 @@ body{
     background-color: #EBEBEB;
 }
 
+.icons{ /* Classe Base / Macro delle icone */
+    height: 25px;
+}
+
+/* 2 Macro contenitori */
 .maxiContainer{
     display: flex;
     flex-direction: column;
@@ -14,8 +19,8 @@ body{
 }
 
 .msgApp{
-    min-height: 800px; /* Debug */
-    min-width: 1500px; /* Debug */
+    height: 80%; /* Debug */
+    width: 80%; /* Debug */
     background-color: #f2f3f8;
     display: flex;
     flex-direction: row;
@@ -23,22 +28,173 @@ body{
     border-radius: 20px;
 }
 
+/* END 2 Macro contenitori */
+
+
+/* Conterrà i contatti */
 .msgContacts{
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
     width: 30%;
     border-right: 3px solid #EBEBEB;
 }
 
+/* END Contenitore dei contatti */
+
+/* MACRO - Contenitore della parte dei messaggi */
 .msgWindow{
     display: flex;
     padding: 30px;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-end;
     width: 70%;
+    overflow-y: scroll;
     background-color: #fbfbfb;
 }
+
+
+/* Contenitore dei messaggi  */
+.msgWindowOutput{
+
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    height: 600px;
+    padding: 20px;
+    width: 100%;
+    overflow: scroll;
+    background-color: bisque; /*DEBUG*/
+}
+
+
+
+/* Msg Sent Template */
+#template{
+    display: none;
+}
+.msgSent{
+    position: relative;
+    display: inline-block;
+    align-self: flex-end;
+    padding: 12px 30px 30px 20px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    min-width: 50px;
+    border-radius: 20px;
+    background-color: rgb(144, 192, 201);
+    
+}
+
+.msgSent::before{
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 60%;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid rgb(144, 192, 201);
+    border-bottom: 13px solid transparent;
+    transform: rotate(-135deg);
+    
+}
+
+.msgRobot{
+    position: relative;
+    display: inline-block;
+    align-self: flex-start;
+    padding: 12px 20px 30px 25px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    min-width: 50px;
+    border-radius: 20px;
+    background-color: #f2f3f8;
+    
+}
+
+.msgRobot::before{
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 60%;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid #f2f3f8;
+    border-bottom: 13px solid transparent;
+    transform: rotate(-35deg);
+    
+}
+
+.msgSentText{
+    color: white;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.msgSentText.robotText{
+    color: rgb(107, 104, 104);
+}
+
+.msgTime{
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    color: #cccccc;
+}
+
+.msgTimeRobot{
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    color: #cccccc;
+}
+
+
+
+/* Contenitore dove posso mettere i messaggi / Contenitore input */
+.typeDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    border-top: 3px solid #EBEBEB;
+}
+
+.iconContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Input per inserire i messaggi */
+.msgTypeText{
+    padding: 20px;
+    color: #BAB9B9;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    /* When clicked it need to be a darker color */
+}
+
+/* Bottone per mandare i messaggi */
+.msgSendBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 13px 10px 10px;
+    border-radius: 15px;
+    background-color: rgb(144, 192, 201);
+    cursor: pointer;
+}
+
+

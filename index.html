@@ -9,15 +9,62 @@
     <title>Msg Stan</title>
 </head>
 <body>
+    <!-- Contenitore che mette tutto al centro  -->
     <div class="maxiContainer">
+
+        <!-- Contenitore principale -->
         <div class="msgApp">
+
+            <!-- Contenitore a Sinistra dei contatti -->
             <div class="msgContacts">
-                <input type="text">
             </div>
+            <!-- END Contenitore a sinistra dei contatti -->
+
+
+            <!-- Contenitore a Destra -->
             <div class="msgWindow">
-                <h1>hello</h1>
+                <!-- Contenitore che conterrà i messaggi -->
+                <div class="msgWindowOutput">
+
+                </div>
+
+                <!-- Contenitore della barra dove scrivere -->
+                <div class="typeDiv">  
+
+                    <div class="iconContainer">
+                        <img class="icons" src="/assets/img/attachment-i.svg" alt="">
+                    </div>
+                    <!-- Questo è dove l'utente inserisce il msg -->
+                    <input type="text" class="msgTypeText" placeholder="Type your message here...">
+                    <!-- Questo è il bottone per inviare il msg -->
+                    <div class="msgSendBtn">
+                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                    </div>
+
+                </div>
+                <!-- END Contenitore della barra dove scrivere -->
             </div>
+            <!-- END contenitore a Destra -->
+        </div>
+        <!-- END contenitore principale -->
+    </div>
+    <!-- End contenitore che mette tutto al centro -->
+    
+    
+    <!-- Div Template -->
+    <div id="template">
+        <div class="msgSent">
+            <p class="msgSentText">Hello</p>
+            <p class="msgTime">11:00</p>
+        </div>
+        <div class="msgRobot">
+            <p class="msgSentText robotText">Hello</p>
+            <p class="msgTimeRobot">11:00</p>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+
 </body>
 </html>
