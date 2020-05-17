@@ -33,11 +33,11 @@ body{
 
 /* Conterrà i contatti */
 .msgContacts{
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 0px 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 30%;
     border-right: 3px solid #EBEBEB;
 }
@@ -51,6 +51,8 @@ body{
     overflow: hidden;
     background-color: white;
     margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 
@@ -69,10 +71,26 @@ body{
     height: 100%;
     overflow-y: scroll;
 }
+
+.fade{
+    position: absolute;
+    top: 85%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(242,243,248,1) 0%, rgba(242,243,248,1) 53%, rgba(255, 255, 255, 0) 100%);
+
+}
+
 .contact{
+    padding: 0px 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.contact:last-child{
+    margin-bottom: 30px;
 }
 
 .profilePic{
@@ -117,6 +135,40 @@ body{
     background-color: #fbfbfb;
 }
 
+.contactInfo{
+    display: block;
+    width: 100%;
+
+}
+
+.contactInfoRef{
+    display: none;
+    padding: 0px 30px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.statusOnline{
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #504D4D;
+}
+
+.iconContact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.iconsContactInfo{
+    margin: 10px;
+    height: 25px;
+}
+
+.iconsContactInfo.video{
+    height: 18px;
+}
 
 /* Contenitore dei messaggi  */
 .msgWindowOutput{
@@ -129,8 +181,10 @@ body{
     padding: 20px;
     width: 100%;
     overflow: scroll;
-    /* background-color: bisque; DEBUG */
+    border-top: 3px solid #EBEBEB;
+    border-bottom: 3px solid #EBEBEB;
 }
+
 
 
 
@@ -225,7 +279,6 @@ body{
     align-items: center;
     padding: 20px;
     width: 100%;
-    border-top: 3px solid #EBEBEB;
 }
 
 .iconContainer{
@@ -261,10 +314,6 @@ body{
     cursor: pointer;
 }
 
-.proviamo{
-    background-color: red;
-    padding: 20px;
-}
 
 
 /* Javascript Classes */
@@ -276,4 +325,8 @@ body{
 
 .activeflex{
     display: flex;
+}
+
+.activeContact{
+    background-color: rgba(107, 104, 104, 0.1);
 }

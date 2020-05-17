@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/lib/stylesheet.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="assets/lib/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <title>Msg Stan</title>
 </head>
 <body>
@@ -19,15 +19,18 @@
             <div class="msgContacts">
                 <!-- Search Bar -->
                 <div class="searchContacts">
-                    <img class="icons" src="/assets/img/search-i.svg" alt="">
+                    <img class="icons" src="assets/img/search-i.svg" alt="">
                     <input type="text" id="search" onkeyup="search()" class="searchContactsInput" placeholder="Search...">
                 </div>
                 <div class="contactContainer">
-                    <div class="contact" data-ref="c1">
-                        <img class="profilePic" src="/assets/img/stan.JPG" alt="">
+                    <div class="fade">
+
+                    </div>
+                    <div class="contact activeContact" data-ref="c1">
+                        <img class="profilePic" src="assets/img/stan.JPG" alt="">
                         <div class="contactText">
                             <h3 class="name">Stanley Napenas</h3>
-                            <p class="lastMsg">Prova</p>
+                            <p class="lastMsg">Designer + Developer</p>
                         </div>
                         <p class="contactTime">11:00</p>
                     </div>              
@@ -36,67 +39,67 @@
                         <img class="profilePic" src="/assets/img/axl.jpg" alt="">
                         <div class="contactText">
                             <h3 class="name">Axl Fernandez</h3>
-                            <p class="lastMsg">Prova</p>
+                            <p class="lastMsg">Sono un vecchio ormai</p>
                         </div>
-                        <p class="contactTime">11:00</p>
+                        <p class="contactTime">8:00</p>
                     </div>
                     <div class="contact" data-ref="c3">
                         <img class="profilePic" src="/assets/img/trisha.jpg" alt="">
                         <div class="contactText">
                             <h3 class="name">Trisha Real</h3>
-                            <p class="lastMsg">Prova</p>
+                            <p class="lastMsg">Figo il design</p>
                         </div>
-                        <p class="contactTime">11:00</p>
+                        <p class="contactTime">10:00</p>
                     </div>
                     <div class="contact" data-ref="c4">
                         <img class="profilePic" src="/assets/img/lostoposit.jpg" alt="">
                         <div class="contactText">
                             <h3 class="name">Lostoposit TheReal</h3>
-                            <p class="lastMsg">Prova</p>
+                            <p class="lastMsg">We brother</p>
                         </div>
-                        <p class="contactTime">11:00</p>
+                        <p class="contactTime">23:00</p>
                     </div>
     
                     <div class="contact" data-ref="c5">
                         <img class="profilePic" src="/assets/img/salmo.jpg" alt="">
                         <div class="contactText">
                             <h3 class="name">Salmo TheRap</h3>
-                            <p class="lastMsg">Prova</p>
+                            <p class="lastMsg">Domani abbiamo le prove</p>
                         </div>
-                        <p class="contactTime">11:00</p>
+                        <p class="contactTime">21:00</p>
                     </div>
                     <div class="contact" data-ref="c6">
                         <img class="profilePic" src="/assets/img/elsa.jpg" alt="">
                         <div class="contactText">
                             <h3 class="name">Elsa Napenas</h3>
-                            <p class="lastMsg">Prova</p>
+                            <p class="lastMsg">Sono vegano</p>
                         </div>
-                        <p class="contactTime">11:00</p>
+                        <p class="contactTime">16:00</p>
                     </div>
                     <div class="contact" data-ref="c7">
-                        <img class="profilePic" src="/assets/img/stan.JPG" alt="">
+                        <img class="profilePic" src="/assets/img/justin.jpg" alt="">
                         <div class="contactText">
-                            <h3 class="name">Stanley Napenas</h3>
-                            <p class="lastMsg">Prova</p>
+                            <h3 class="name">Justin Martinez</h3>
+                            <p class="lastMsg">Zio zio!</p>
                         </div>
-                        <p class="contactTime">11:00</p>
+                        <p class="contactTime">11:30</p>
                     </div>
     
                     <div class="contact" data-ref="c8">
-                        <img class="profilePic" src="/assets/img/stan.JPG" alt="">
+                        <img class="profilePic" src="/assets/img/jake.jpg" alt="">
                         <div class="contactText">
-                            <h3 class="name">Stanley Napenas</h3>
-                            <p class="lastMsg">Prova</p>
+                            <h3 class="name">Jake Martinez</h3>
+                            <p class="lastMsg">Andiamo a giocare a basket?</p>
                         </div>
-                        <p class="contactTime">11:00</p>
+                        <p class="contactTime">10:00</p>
                     </div>
                     <div class="contact" data-ref="c9">
-                        <img class="profilePic" src="/assets/img/stan.JPG" alt="">
+                        <img class="profilePic" src="assets/img/elisabetta.jpg" alt="">
                         <div class="contactText">
-                            <h3 class="name">Stanley Napenas</h3>
-                            <p class="lastMsg">Prova</p>
+                            <h3 class="name">Elisabetta Bianca</h3>
+                            <p class="lastMsg">Stan dove sei?</p>
                         </div>
-                        <p class="contactTime">11:00</p>
+                        <p class="contactTime">17:30</p>
                     </div>
                 </div>
 
@@ -106,53 +109,167 @@
 
             <!-- Contenitore a Destra -->
             <div class="msgWindow">
+
+                <!-- Contenitore che tiene i nomi del contatto -->
+                <div class="contactInfo">
+                    <div class="contactInfoRef activeflex" data-ref="c1">
+                        <img class="profilePic" src="assets/img/stan.JPG" alt="">
+                        <div class="contactText">
+                            <h3 class="name">Stanley Napenas</h3>
+                            <p class="statusOnline">Online • Last seen 11:30</p>
+                        </div>
+                        <div class="iconContact">
+                            <img class="iconsContactInfo" src="assets/img/call-i.svg" alt="">
+                            <img class="iconsContactInfo video" src="assets/img/video-i.svg" alt="">
+                            <img class="iconsContactInfo" src="assets/img/more-i.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="contactInfoRef" data-ref="c2">
+                        <img class="profilePic" src="assets/img/axl.jpg" alt="">
+                        <div class="contactText">
+                            <h3 class="name">Axl Fernandez</h3>
+                            <p class="statusOnline">Online  •  Last seen 8:00</p>
+                        </div>
+                        <div class="iconContact">
+                            <img class="iconsContactInfo" src="assets/img/call-i.svg" alt="">
+                            <img class="iconsContactInfo video" src="assets/img/video-i.svg" alt="">
+                            <img class="iconsContactInfo" src="assets/img/more-i.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="contactInfoRef" data-ref="c3">
+                        <img class="profilePic" src="assets/img/trisha.jpg" alt="">
+                        <div class="contactText">
+                            <h3 class="name">Trisha Real</h3>
+                            <p class="statusOnline">Online  •  Last seen 10:00</p>
+                        </div>
+                        <div class="iconContact">
+                            <img class="iconsContactInfo" src="assets/img/call-i.svg" alt="">
+                            <img class="iconsContactInfo video" src="assets/img/video-i.svg" alt="">
+                            <img class="iconsContactInfo" src="assets/img/more-i.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="contactInfoRef" data-ref="c4">
+                        <img class="profilePic" src="assets/img/lostoposit.jpg" alt="">
+                        <div class="contactText">
+                            <h3 class="name">Lostoposit TheReal</h3>
+                            <p class="statusOnline">Online  •  Last seen 23:00</p>
+                        </div>
+                        <div class="iconContact">
+                            <img class="iconsContactInfo" src="assets/img/call-i.svg" alt="">
+                            <img class="iconsContactInfo video" src="assets/img/video-i.svg" alt="">
+                            <img class="iconsContactInfo" src="assets/img/more-i.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="contactInfoRef" data-ref="c5">
+                        <img class="profilePic" src="assets/img/salmo.jpg" alt="">
+                        <div class="contactText">
+                            <h3 class="name">Salmo TheRap</h3>
+                            <p class="statusOnline">Online  •  Last seen 21:00</p>
+                        </div>
+                        <div class="iconContact">
+                            <img class="iconsContactInfo" src="assets/img/call-i.svg" alt="">
+                            <img class="iconsContactInfo video" src="assets/img/video-i.svg" alt="">
+                            <img class="iconsContactInfo" src="assets/img/more-i.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="contactInfoRef" data-ref="c6">
+                        <img class="profilePic" src="assets/img/elsa.jpg" alt="">
+                        <div class="contactText">
+                            <h3 class="name">Elsa Napenas</h3>
+                            <p class="statusOnline">Online  •  Last seen 16:00</p>
+                        </div>
+                        <div class="iconContact">
+                            <img class="iconsContactInfo" src="assets/img/call-i.svg" alt="">
+                            <img class="iconsContactInfo video" src="assets/img/video-i.svg" alt="">
+                            <img class="iconsContactInfo" src="assets/img/more-i.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="contactInfoRef" data-ref="c7">
+                        <img class="profilePic" src="assets/img/justin.jpg" alt="">
+                        <div class="contactText">
+                            <h3 class="name">Justin Martinez</h3>
+                            <p class="statusOnline">Online  •  Last seen 11:30</p>
+                        </div>
+                        <div class="iconContact">
+                            <img class="iconsContactInfo" src="assets/img/call-i.svg" alt="">
+                            <img class="iconsContactInfo video" src="assets/img/video-i.svg" alt="">
+                            <img class="iconsContactInfo" src="assets/img/more-i.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="contactInfoRef" data-ref="c8">
+                        <img class="profilePic" src="assets/img/jake.jpg" alt="">
+                        <div class="contactText">
+                            <h3 class="name">Jake Martinez</h3>
+                            <p class="statusOnline">Online  •  Last seen 10:00</p>
+                        </div>
+                        <div class="iconContact">
+                            <img class="iconsContactInfo" src="assets/img/call-i.svg" alt="">
+                            <img class="iconsContactInfo video" src="assets/img/video-i.svg" alt="">
+                            <img class="iconsContactInfo" src="assets/img/more-i.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="contactInfoRef" data-ref="c9">
+                        <img class="profilePic" src="assets/img/elisabetta.jpg" alt="">
+                        <div class="contactText">
+                            <h3 class="name">Elisabetta Bianca</h3>
+                            <p class="statusOnline">Online  •  Last seen 17:30</p>
+                        </div>
+                        <div class="iconContact">
+                            <img class="iconsContactInfo" src="assets/img/call-i.svg" alt="">
+                            <img class="iconsContactInfo video" src="assets/img/video-i.svg" alt="">
+                            <img class="iconsContactInfo" src="assets/img/more-i.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
                 <!-- Contenitore che conterrà i messaggi -->
                 <div class="msgWindowOutput activeflex" data-ref="c1">
-                    1
+                    
                 </div>
                 <div class="msgWindowOutput" data-ref="c2">
-                    2
+                    
                 </div>
                 <div class="msgWindowOutput" data-ref="c3">
-                    3
+                    
                 </div>
                 <div class="msgWindowOutput" data-ref="c4">
-                    4
+                    
                 </div>
                 <div class="msgWindowOutput" data-ref="c5">
-                    5
+                    
                 </div>
                 <div class="msgWindowOutput" data-ref="c6">
-                    6
+                    
                 </div>
                 <div class="msgWindowOutput" data-ref="c7">
-                    7 
+                     
                 </div>
                 <div class="msgWindowOutput" data-ref="c8">
-                    8
+                    
                 </div>
                 <div class="msgWindowOutput" data-ref="c9">
-                    9
+                    
                 </div>
 
                 <!-- Contenitore della barra dove scrivere -->
                 <div class="typeDiv">  
 
                     <div class="iconContainer">
-                        <img class="icons" src="/assets/img/attachment-i.svg" alt="">
+                        <img class="icons" src="assets/img/attachment-i.svg" alt="">
                     </div>
                     <!-- Questo è dove l'utente inserisce il msg -->
                     
                     
-                    <input type="text" class="msgTypeText active" data-ref="c1" placeholder="Type your message here...1">
-                    <input type="text" class="msgTypeText" data-ref="c2" placeholder="Type your message here...2">
-                    <input type="text" class="msgTypeText" data-ref="c3" placeholder="Type your message here...3">
-                    <input type="text" class="msgTypeText" data-ref="c4" placeholder="Type your message here...4">
-                    <input type="text" class="msgTypeText" data-ref="c5" placeholder="Type your message here...5">
-                    <input type="text" class="msgTypeText" data-ref="c6" placeholder="Type your message here...6">
-                    <input type="text" class="msgTypeText" data-ref="c7" placeholder="Type your message here...7">
-                    <input type="text" class="msgTypeText" data-ref="c8" placeholder="Type your message here...8">
-                    <input type="text" class="msgTypeText" data-ref="c9" placeholder="Type your message here...9">
+                    <input type="text" class="msgTypeText active" data-ref="c1" placeholder="Type your message here...">
+                    <input type="text" class="msgTypeText" data-ref="c2" placeholder="Type your message here...">
+                    <input type="text" class="msgTypeText" data-ref="c3" placeholder="Type your message here...">
+                    <input type="text" class="msgTypeText" data-ref="c4" placeholder="Type your message here...">
+                    <input type="text" class="msgTypeText" data-ref="c5" placeholder="Type your message here...">
+                    <input type="text" class="msgTypeText" data-ref="c6" placeholder="Type your message here...">
+                    <input type="text" class="msgTypeText" data-ref="c7" placeholder="Type your message here...">
+                    <input type="text" class="msgTypeText" data-ref="c8" placeholder="Type your message here...">
+                    <input type="text" class="msgTypeText" data-ref="c9" placeholder="Type your message here...">
                     
                     
                     
@@ -160,36 +277,38 @@
                     
                     <!-- Questo è il bottone per inviare il msg -->
                     <div class="msgSendBtn activeflex" data-ref="c1">
-                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                        <img class="icons" src="assets/img/send-i.svg" alt="">
                     </div>
                     <div class="msgSendBtn" data-ref="c2">
-                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                        <img class="icons" src="assets/img/send-i.svg" alt="">
                     </div>
                     <div class="msgSendBtn" data-ref="c3">
-                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                        <img class="icons" src="assets/img/send-i.svg" alt="">
                     </div>
                     <div class="msgSendBtn" data-ref="c4">
-                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                        <img class="icons" src="assets/img/send-i.svg" alt="">
                     </div>
                     <div class="msgSendBtn" data-ref="c5">
-                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                        <img class="icons" src="assets/img/send-i.svg" alt="">
                     </div>
                     <div class="msgSendBtn" data-ref="c6">
-                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                        <img class="icons" src="assets/img/send-i.svg" alt="">
                     </div>
                     <div class="msgSendBtn" data-ref="c7">
-                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                        <img class="icons" src="assets/img/send-i.svg" alt="">
                     </div>
                     <div class="msgSendBtn" data-ref="c8">
-                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                        <img class="icons" src="assets/img/send-i.svg" alt="">
                     </div>
                     <div class="msgSendBtn" data-ref="c9">
-                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                        <img class="icons" src="assets/img/send-i.svg" alt="">
                     </div>
 
                 </div>
                 <!-- END Contenitore della barra dove scrivere -->
             </div>
+
+
             <!-- END contenitore a Destra -->
         </div>
         <!-- END contenitore principale -->
@@ -210,7 +329,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 
 </body>
 </html>

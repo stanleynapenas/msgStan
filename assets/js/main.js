@@ -8,13 +8,101 @@
 // Al click di invio messaggio ".msgSendBtn"
 $(".msgSendBtn").click(sendMsg);
 // Quando premono Invio, invia messaggio
-$(window).on({
-    keyup: function (e) {
-        if (e.keyCode == "13"){
-            sendMsg()
+$(".msgTypeText").on({
+    keyup: function (n) {
+        if (n.keyCode == "13"){
+            sendMsg(this)
+            // Funzione che mi manda un messaggio
+            function sendMsg (questo){
+
+                // Salvo Data-Ref di questo bottone (Che servirà per collegare gli altri elementi)
+                var dataRefContact = $(questo).attr("data-ref");
+                console.log("Questo è dataRefContact: ", dataRefContact);
+                
+
+                var parent = questo;
+
+                // Mi salva l'ora
+                var d = new Date;
+                var h = addZero(d.getHours());
+                var m = addZero(d.getMinutes());
+
+                function addZero(i) {
+                    if (i < 10) {
+                        i = "0" + i;
+                    }
+                    return i;
+                }
+
+
+                
+
+
+                // Salviamo il valore dell'input / testo
+                var msg = $(".msgTypeText[data-ref=" + dataRefContact +"]").val();
+                console.log(msg);
+
+                // Clono il mio template / div da riutilizzare
+                var elementmsg = $("#template .msgSent").clone();
+
+                // Modifica questa copia di "msgSent" aggiungendogli il testo del messaggio al paragrafo
+                elementmsg.find(".msgSentText").text(msg);
+                elementmsg.find(".msgTime").text(h + ":" + m);
+
+                // Appendiamo una copa con testo valorizzato del div "msgSent"
+                $(".msgWindowOutput[data-ref=" + dataRefContact +"]").prepend(elementmsg);
+
+                // ripuliamo il contenuto dell'input
+                $(".msgTypeText[data-ref=" + dataRefContact +"]").val("");
+
+                setTimeout(sendMsgRobot, 1500);
+
+                    
+                
+                // Funzione che il robot manda messaggio
+                function sendMsgRobot (){
+                
+                    // Salvo Data-Ref di questo bottone (Che servirà per collegare gli altri elementi)
+                    var dataRefContactRobot = $(parent).attr("data-ref");
+                    console.log("Questo è dataRefContactRobot: ", dataRefContactRobot);
+                
+                    var d = new Date;
+                    var h = addZero(d.getHours());
+                    var m = addZero(d.getMinutes());
+                    console.log(h + ":" + m);
+                
+                    function addZero(f) {
+                        if (f < 10) {
+                            f = "0" + f;
+                        }
+                        return f;
+                    }
+                
+                
+                
+                    // Salviamo il valore dell'input / testo
+                    robotmsg = "Ciao Stan";
+                    console.log(robotmsg);
+                
+                    // Clono il mio template / div da riutilizzare
+                    var elementmsgRobot = $("#template .msgRobot").clone();
+                
+                    // Modifica questa copia di "msgSent" aggiungendogli il testo del messaggio al paragrafo
+                    elementmsgRobot.find(".msgSentText.robotText").text(robotmsg);
+                    elementmsgRobot.find(".msgTimeRobot").text(h + ":" + m);
+                    console.log(h + ":" + m);
+                
+                
+                
+                    // Appendiamo una copa con testo valorizzato del div "msgSent"
+                    $(".msgWindowOutput[data-ref=" + dataRefContactRobot +"]").prepend(elementmsgRobot);
+                
+                }
+            }
         }
     }
 })
+
 
 
 // -- FUNZIONI --
@@ -40,29 +128,34 @@ function sendMsg (){
         }
         return i;
     }
-
-
     
-
-
+    
+    
+    
+    
     // Salviamo il valore dell'input / testo
     var msg = $(".msgTypeText[data-ref=" + dataRefContact +"]").val();
     console.log(msg);
-
+    
     // Clono il mio template / div da riutilizzare
     var elementmsg = $("#template .msgSent").clone();
-
+    
     // Modifica questa copia di "msgSent" aggiungendogli il testo del messaggio al paragrafo
     elementmsg.find(".msgSentText").text(msg);
     elementmsg.find(".msgTime").text(h + ":" + m);
-
+    
     // Appendiamo una copa con testo valorizzato del div "msgSent"
     $(".msgWindowOutput[data-ref=" + dataRefContact +"]").prepend(elementmsg);
-
+    
     // ripuliamo il contenuto dell'input
     $(".msgTypeText[data-ref=" + dataRefContact +"]").val("");
-
+    
     setTimeout(sendMsgRobot, 1500);
+    
+
+
+
+    // Funzione che il robot manda messaggio
     function sendMsgRobot (){
     
         // Salvo Data-Ref di questo bottone (Che servirà per collegare gli altri elementi)
@@ -103,8 +196,6 @@ function sendMsg (){
     }
 }
 
-// Funzione che il robot manda messaggio
-
 // Funzione di ricerca
 function search() {
     // Declare variables
@@ -124,7 +215,7 @@ function search() {
         contact[j].style.display = "none";
       }
     }
-  }
+}
 
 
 // function contattiGen (pic, name, text, time){
@@ -155,9 +246,12 @@ $(".contact").click(function (){
     $(".msgWindowOutput").removeClass("activeflex");
     $(".msgTypeText").removeClass("active");
     $(".msgSendBtn").removeClass("activeflex");
+    $(".contact").removeClass("activeContact");
+    $(".contactInfoRef").removeClass("activeflex");
 
-    
+    $(this).addClass("activeContact");
     $(".msgWindowOutput[data-ref=" + clickedcontact +"]").addClass("activeflex");
     $(".msgTypeText[data-ref=" + clickedcontact +"]").addClass("active");
     $(".msgSendBtn[data-ref=" + clickedcontact +"]").addClass("activeflex");
+    $(".contactInfoRef[data-ref=" + clickedcontact +"]").addClass("activeflex");
 })
