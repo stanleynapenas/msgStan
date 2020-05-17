@@ -17,6 +17,7 @@ $(window).on({
 })
 
 
+
 // Funzione che mi manda un messaggio
 function sendMsg (){
     var d = new Date;
@@ -44,7 +45,7 @@ function sendMsg (){
     console.log(h + ":" + m);
 
     // Appendiamo una copa con testo valorizzato del div "msgSent"
-    $(".msgWindowOutput").append(elementmsg);
+    $(".msgWindowOutput").prepend(elementmsg);
 
     // ripuliamo il contenuto dell'input
     $(".msgTypeText").val("");
@@ -79,7 +80,43 @@ function sendMsgRobot (){
     console.log(h + ":" + m);
 
     // Appendiamo una copa con testo valorizzato del div "msgSent"
-    $(".msgWindowOutput").append(elementmsgRobot);
+    $(".msgWindowOutput").prepend(elementmsgRobot);
 
 }
 
+function search() {
+    // Declare variables
+    var input, filter, contactContainer, contact, name, j, txtValue;
+    input = document.getElementById('search');
+    filter = input.value.toUpperCase();
+    contactContainer = document.getElementsByClassName('contactContainer');
+    contact = document.getElementsByClassName('contact');
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (j = 0; j < contact.length; j++) {
+      name = contact[j].getElementsByClassName('name')[0];
+      txtValue = name.textContent || name.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        contact[j].style.display = "";
+      } else {
+        contact[j].style.display = "none";
+      }
+    }
+  }
+
+
+function contattiGen (pic, name, text, time){
+    this.pic = '<img class="profilePic" src="/assets/img/' + pic + '" alt=""></img>';
+    this.name = '<h3 class="name">' + name + '</h3>';
+    this.text = '<p class="lastMsg">' + text + '</p>';
+    this.time = '<p class="contactTime">' + time + '</p>';
+}
+
+var stanley = new contattiGen("stan.JPG", "Stanley Napenas", "prova", "11:30");
+console.log(stanley);
+
+$("#prova").append(stanley);
+
+// Array di oggetti 
+// Questi oggetti contengono nome, testo, foto, tempo
+// For each > Append

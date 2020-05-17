@@ -37,9 +37,72 @@ body{
     flex-direction: column;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding: 0px 30px;
     width: 30%;
     border-right: 3px solid #EBEBEB;
 }
+
+.searchContacts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+
+
+.searchContactsInput{
+    padding: 20px;
+    color: #BAB9B9;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+/* Contatti */
+.contactContainer{
+    height: 100%;
+    overflow-y: scroll;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profilePic{
+    height: 50px;
+    border-radius: 50%;
+}
+
+.contactText{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.name{
+    margin-bottom: 2px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #504D4D;
+}
+
+.lastMsg{
+    margin-bottom: 10px;
+    color: #504D4D;
+}
+
+.contactTime{
+    margin-top: 20px;
+    color: #504D4D;
+}
+
 
 /* END Contenitore dei contatti */
 
@@ -62,11 +125,11 @@ body{
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-end;
-    height: 600px;
+    height: 100%;
     padding: 20px;
     width: 100%;
     overflow: scroll;
-    background-color: bisque; /*DEBUG*/
+    /* background-color: bisque; DEBUG */
 }
 
 
@@ -197,4 +260,7 @@ body{
     cursor: pointer;
 }
 
-
+.proviamo{
+    background-color: red;
+    padding: 20px;
+}
