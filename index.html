@@ -23,16 +23,16 @@
                     <input type="text" id="search" onkeyup="search()" class="searchContactsInput" placeholder="Search...">
                 </div>
                 <div class="contactContainer">
-                    <div class="contact">
+                    <div class="contact" data-ref="c1">
                         <img class="profilePic" src="/assets/img/stan.JPG" alt="">
                         <div class="contactText">
                             <h3 class="name">Stanley Napenas</h3>
                             <p class="lastMsg">Prova</p>
                         </div>
                         <p class="contactTime">11:00</p>
-                    </div>
+                    </div>              
     
-                    <div class="contact">
+                    <div class="contact" data-ref="c2">
                         <img class="profilePic" src="/assets/img/axl.jpg" alt="">
                         <div class="contactText">
                             <h3 class="name">Axl Fernandez</h3>
@@ -40,7 +40,7 @@
                         </div>
                         <p class="contactTime">11:00</p>
                     </div>
-                    <div class="contact">
+                    <div class="contact" data-ref="c3">
                         <img class="profilePic" src="/assets/img/trisha.jpg" alt="">
                         <div class="contactText">
                             <h3 class="name">Trisha Real</h3>
@@ -48,7 +48,7 @@
                         </div>
                         <p class="contactTime">11:00</p>
                     </div>
-                    <div class="contact">
+                    <div class="contact" data-ref="c4">
                         <img class="profilePic" src="/assets/img/lostoposit.jpg" alt="">
                         <div class="contactText">
                             <h3 class="name">Lostoposit TheReal</h3>
@@ -57,7 +57,7 @@
                         <p class="contactTime">11:00</p>
                     </div>
     
-                    <div class="contact">
+                    <div class="contact" data-ref="c5">
                         <img class="profilePic" src="/assets/img/salmo.jpg" alt="">
                         <div class="contactText">
                             <h3 class="name">Salmo TheRap</h3>
@@ -65,7 +65,7 @@
                         </div>
                         <p class="contactTime">11:00</p>
                     </div>
-                    <div class="contact">
+                    <div class="contact" data-ref="c6">
                         <img class="profilePic" src="/assets/img/elsa.jpg" alt="">
                         <div class="contactText">
                             <h3 class="name">Elsa Napenas</h3>
@@ -73,7 +73,7 @@
                         </div>
                         <p class="contactTime">11:00</p>
                     </div>
-                    <div class="contact">
+                    <div class="contact" data-ref="c7">
                         <img class="profilePic" src="/assets/img/stan.JPG" alt="">
                         <div class="contactText">
                             <h3 class="name">Stanley Napenas</h3>
@@ -82,7 +82,7 @@
                         <p class="contactTime">11:00</p>
                     </div>
     
-                    <div class="contact">
+                    <div class="contact" data-ref="c8">
                         <img class="profilePic" src="/assets/img/stan.JPG" alt="">
                         <div class="contactText">
                             <h3 class="name">Stanley Napenas</h3>
@@ -90,7 +90,7 @@
                         </div>
                         <p class="contactTime">11:00</p>
                     </div>
-                    <div class="contact">
+                    <div class="contact" data-ref="c9">
                         <img class="profilePic" src="/assets/img/stan.JPG" alt="">
                         <div class="contactText">
                             <h3 class="name">Stanley Napenas</h3>
@@ -107,8 +107,32 @@
             <!-- Contenitore a Destra -->
             <div class="msgWindow">
                 <!-- Contenitore che conterrà i messaggi -->
-                <div class="msgWindowOutput">
-
+                <div class="msgWindowOutput activeflex" data-ref="c1">
+                    1
+                </div>
+                <div class="msgWindowOutput" data-ref="c2">
+                    2
+                </div>
+                <div class="msgWindowOutput" data-ref="c3">
+                    3
+                </div>
+                <div class="msgWindowOutput" data-ref="c4">
+                    4
+                </div>
+                <div class="msgWindowOutput" data-ref="c5">
+                    5
+                </div>
+                <div class="msgWindowOutput" data-ref="c6">
+                    6
+                </div>
+                <div class="msgWindowOutput" data-ref="c7">
+                    7 
+                </div>
+                <div class="msgWindowOutput" data-ref="c8">
+                    8
+                </div>
+                <div class="msgWindowOutput" data-ref="c9">
+                    9
                 </div>
 
                 <!-- Contenitore della barra dove scrivere -->
@@ -118,9 +142,48 @@
                         <img class="icons" src="/assets/img/attachment-i.svg" alt="">
                     </div>
                     <!-- Questo è dove l'utente inserisce il msg -->
-                    <input type="text" class="msgTypeText" placeholder="Type your message here...">
+                    
+                    
+                    <input type="text" class="msgTypeText active" data-ref="c1" placeholder="Type your message here...1">
+                    <input type="text" class="msgTypeText" data-ref="c2" placeholder="Type your message here...2">
+                    <input type="text" class="msgTypeText" data-ref="c3" placeholder="Type your message here...3">
+                    <input type="text" class="msgTypeText" data-ref="c4" placeholder="Type your message here...4">
+                    <input type="text" class="msgTypeText" data-ref="c5" placeholder="Type your message here...5">
+                    <input type="text" class="msgTypeText" data-ref="c6" placeholder="Type your message here...6">
+                    <input type="text" class="msgTypeText" data-ref="c7" placeholder="Type your message here...7">
+                    <input type="text" class="msgTypeText" data-ref="c8" placeholder="Type your message here...8">
+                    <input type="text" class="msgTypeText" data-ref="c9" placeholder="Type your message here...9">
+                    
+                    
+                    
+                    
+                    
                     <!-- Questo è il bottone per inviare il msg -->
-                    <div class="msgSendBtn">
+                    <div class="msgSendBtn activeflex" data-ref="c1">
+                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                    </div>
+                    <div class="msgSendBtn" data-ref="c2">
+                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                    </div>
+                    <div class="msgSendBtn" data-ref="c3">
+                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                    </div>
+                    <div class="msgSendBtn" data-ref="c4">
+                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                    </div>
+                    <div class="msgSendBtn" data-ref="c5">
+                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                    </div>
+                    <div class="msgSendBtn" data-ref="c6">
+                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                    </div>
+                    <div class="msgSendBtn" data-ref="c7">
+                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                    </div>
+                    <div class="msgSendBtn" data-ref="c8">
+                        <img class="icons" src="/assets/img/send-i.svg" alt="">
+                    </div>
+                    <div class="msgSendBtn" data-ref="c9">
                         <img class="icons" src="/assets/img/send-i.svg" alt="">
                     </div>
 
@@ -133,10 +196,7 @@
     </div>
     <!-- End contenitore che mette tutto al centro -->
     
-    
-    <div class="" id="prova">
 
-    </div>
     <!-- Div Template -->
     <div id="template">
         <div class="msgSent">
