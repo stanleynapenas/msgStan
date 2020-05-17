@@ -105,17 +105,17 @@ function search() {
   }
 
 
-function contattiGen (pic, name, text, time){
-    this.pic = '<img class="profilePic" src="/assets/img/' + pic + '" alt=""></img>';
-    this.name = '<h3 class="name">' + name + '</h3>';
-    this.text = '<p class="lastMsg">' + text + '</p>';
-    this.time = '<p class="contactTime">' + time + '</p>';
-}
+// function contattiGen (pic, name, text, time){
+//     this.pic = '<img class="profilePic" src="/assets/img/' + pic + '" alt=""></img>';
+//     this.name = '<h3 class="name">' + name + '</h3>';
+//     this.text = '<p class="lastMsg">' + text + '</p>';
+//     this.time = '<p class="contactTime">' + time + '</p>';
+// }
 
-var stanley = new contattiGen("stan.JPG", "Stanley Napenas", "prova", "11:30");
-console.log(stanley);
+// var stanley = new contattiGen("stan.JPG", "Stanley Napenas", "prova", "11:30");
+// console.log(stanley);
 
-$("#prova").append(stanley);
+// $("#prova").append(stanley);
 
 // Array di oggetti 
 // Questi oggetti contengono nome, testo, foto, tempo
